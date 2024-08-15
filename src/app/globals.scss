@@ -1,0 +1,45 @@
+
+@import '@/styles/_variables.scss';
+@import '@/styles/_mixins.scss';
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: $c-off-white;
+}
+
+.header {
+    @include flex-centered;
+    background-color: $c-primary-blue;
+    color: $c-primary-pink;
+    padding: 24px;
+    font-size: 1.5rem;
+}
+
+.randomizer {
+    @include flex-centered;
+    flex-direction: column;
+    padding: 24px;
+
+    &__framework {
+        font-size: 3rem;
+
+        &--saver {
+            @include flex-centered;
+            flex-direction: column;
+            background-color: rgb(217, 216, 216);
+            padding: 24px
+        }
+
+        &--save-button {
+            @include button-style;
+        }
+    }
+}
+
+.randomizer-btn {
+    @include button-style;
+}
